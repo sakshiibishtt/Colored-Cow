@@ -1,49 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ColoredCow Careers</title>
-  <link rel="stylesheet" href="ui/style.css" />
-</head>
-<body>
-  <header>
-    <div class="container header-content">
-      <h1>🌈 ColoredCow Careers</h1>
-      <nav>
-        <a href="login.html" class="btn btn-outline">HR Login</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero container">
-      <div class="hero-text">
-        <h2>Your Career Starts Here</h2>
-        <p>Join our team and help build meaningful products. Explore job openings or check your application status.</p>
-        <div class="hero-buttons">
-          <a href="apply.html" class="btn btn-primary">Apply for a Job</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColoredCow Careers</title>
+    <link rel="stylesheet" href="ui/style.css" />
+    <link rel="icon" type="image/png" href="ui/images/logo-cow.png" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo-title">
+          <img
+            src="ui/images/logo.png"
+            alt="ColoredCow Logo"
+            class="logo-img"
+          />
         </div>
+        <nav>
+          <a href="login.html" class="btn btn-outline">HR Login</a>
+        </nav>
       </div>
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fit=crop&w=600&h=400" alt="Teamwork Illustration">
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-text">
+          <h2>Your Career Starts Here</h2>
+          <p>
+            Join our team and help build meaningful products. Explore job
+            openings or check your application status.
+          </p>
+          <div class="hero-buttons">
+            <a href="apply.html" class="btn btn-primary">Apply for a Job</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="ui\images\archive-career-bg.png"
+            alt="Teamwork Illustration"
+          />
+        </div>
+      </section>
+
+      <section class="status-check container">
+        <h2>Check Your Application Status</h2>
+        <form
+          id="status-form"
+          class="status-form"
+          action="status.html"
+          method="GET"
+        >
+          <input
+            type="email"
+            name="email"
+            id="email-input"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" class="btn btn-secondary">Check Status</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 ColoredCow. All rights reserved.</p>
       </div>
-    </section>
-    
-    <section class="status-check container">
-      <h2>Check Your Application Status</h2>
-      <form id="status-form" class="status-form" action="status.html" method="GET">
-        <input type="email" name="email" id="email-input" placeholder="Enter your email" required />
-        <button type="submit" class="btn btn-secondary">Check Status</button>
-      </form>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 ColoredCow. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

@@ -308,3 +308,15 @@ footer {
   appearance: none; /* for consistent dropdown arrow */
   cursor: pointer;
 }
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  filter: invert(1);
+}
