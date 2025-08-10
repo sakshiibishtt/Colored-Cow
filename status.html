@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Check Application Status - ColoredCow Careers</title>
+  <link rel="stylesheet" href="ui/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <h1>🌈 ColoredCow Careers</h1>
+      <nav>
+        <a href="index.html" class="btn btn-outline">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="status-check container">
+      <h2>Check Your Application Status</h2>
+
+      <p id="email-display" style="text-align:center; font-weight:bold;"></p>
+
+      <div id="status-result" class="status-result" style="text-align:center;"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 ColoredCow. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  
+    const params = new URLSearchParams(window.location.search);
+    const email = params.get('email');
+
+    const emailDisplay = document.getElementById('email-display');
+    const statusResult = document.getElementById('status-result');
+
+    if (email) {
+      emailDisplay.textContent = `Application status for: ${email}`;
+      statusResult.textContent = "Loading status...";
+
+      setTimeout(() => {
+        statusResult.textContent = "Your application is currently: Under Review";
+      }, 1000);
+    } else {
+      emailDisplay.textContent = "No email provided.";
+      statusResult.textContent = "";
+    }
+  </script>
+</body>
+</html>
